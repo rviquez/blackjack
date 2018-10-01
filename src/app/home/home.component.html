@@ -1,0 +1,26 @@
+<div class="container-fluid">
+  <div class="main-controls">
+    <div class="row">
+<div class="col-md-2"><button (click)="startGame()" type="button" class="btn btn-primary" [disabled]="gameStarted">Start
+    Game</button></div>
+      <div class="col-md-2">
+        <input #numberOfPlayers type="number" name="players" id="players" placeholder="players" disabled>
+      </div>
+      <div class="col-md-2"></div>
+      <div class="col-md-2"></div>
+      <div class="col-md-2"></div>
+      <div class="col-md-2"></div>
+    </div>
+
+  </div>
+  <div class="row playing-table">
+    <div class="col-md-6">
+      <dealer [deck]="dealerDeck"></dealer>
+    </div>
+    <div class="col-md-6">
+      <div class="row" *ngFor="let player of players">
+        <player [number]="player" [deck]="playerDeck" (hitMe)="dealPlayer($event)"></player>
+      </div>
+    </div>
+  </div>
+</div>

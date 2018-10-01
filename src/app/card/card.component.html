@@ -1,0 +1,10 @@
+<div *ngIf="card">
+  <div class="outline shadow rounded" [style.color]="card?.color" *ngIf="!card.faceDown">
+    <div class="top"><span>{{ card.displayValue }}</span><span>{{ card.type }}</span></div>
+    <h1>{{ card.type }}</h1>
+    <div class="bottom"><span>{{ card.type }}</span><span>{{ card.displayValue }}</span></div>
+  </div>
+  <div class="outline shadow rounded" [style.color]="card.color" *ngIf="card.faceDown">
+    <div class="card-back"></div>
+  </div>
+</div>

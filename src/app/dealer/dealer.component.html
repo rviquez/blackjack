@@ -1,0 +1,8 @@
+<div class="content row">
+  <div class="col-md-12">
+    <h1>Dealer</h1>
+  </div>
+  <div class="gamespace" *ngFor="let card of deck.cards">
+    <card [card]="card"></card>
+  </div>
+</div>

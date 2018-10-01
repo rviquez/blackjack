@@ -1,0 +1,14 @@
+<div class="player">
+  <div class="row player-controls">
+    <div class="col-md-6">
+      <h1>Player {{ number }}</h1>
+    </div>
+    <div class="col-md-3"><button (click)="hit()" type="button" class="btn btn-danger">Hit</button></div>
+    <div class="col-md-3"><button type="button" class="btn btn-secondary">Hold</button></div>
+  </div>
+  <div class="row">
+    <div class="game-space" *ngFor="let card of deck.cards">
+      <card [card]="card"></card>
+    </div>
+  </div>
+</div>
